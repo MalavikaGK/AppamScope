@@ -1,0 +1,5 @@
+{
+  "name": "AppamScope",
+  "description": "An application that generates a whimsical horoscope by analyzing an image of a South Indian Appam pancake.",
+  "requestFramePermissions": []
+}

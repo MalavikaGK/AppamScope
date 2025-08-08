@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AppamScope</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* For Background.tsx animations */
+      @keyframes twinkle {
+        0%, 100% { opacity: 0.5; }
+        50% { opacity: 1; }
+      }
+      .animate-twinkle {
+        animation: twinkle 2s ease-in-out infinite;
+      }
+      
+      @keyframes float-symbol {
+        0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+        10% { opacity: 0.7; }
+        90% { opacity: 0.7; }
+        100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+      }
+      .animate-float-symbol {
+        animation: float-symbol 20s linear infinite;
+        top: auto;
+        bottom: -100px;
+      }
+
+      @keyframes rise {
+        from { transform: translateY(0); opacity: 1; }
+        to { transform: translateY(-100vh); opacity: 0; }
+      }
+      .animate-rise {
+          animation: rise 8s linear infinite;
+      }
+      
+      /* For Hero.tsx animations */
+      @keyframes float-appam {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+      }
+      .animate-float-appam {
+        animation: float-appam 4s ease-in-out infinite;
+      }
+
+      @keyframes shimmer {
+        0% { background-position: -500%; }
+        100% { background-position: 500%; }
+      }
+      .animate-shimmer {
+        background-size: 200% auto;
+        animation: shimmer 5s linear infinite;
+      }
+      
+      @keyframes pulse-glow {
+          0%, 100% {
+              box-shadow: 0 0 10px rgba(252, 211, 77, 0.3), 0 0 20px rgba(239, 68, 68, 0.2);
+          }
+          50% {
+              box-shadow: 0 0 20px rgba(252, 211, 77, 0.6), 0 0 40px rgba(239, 68, 68, 0.4);
+          }
+      }
+      .animate-pulse-glow {
+          animation: pulse-glow 3s infinite ease-in-out;
+      }
+
+      /* For other animations */
+      @keyframes slide-up {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-slide-up {
+        animation: slide-up 0.5s ease-out forwards;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.13.0",
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
