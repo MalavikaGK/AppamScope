@@ -61,4 +61,4 @@ https://drive.google.com/file/d/1HNwGitQjKgnhwQz_NTKRbD8Q_O0ooxwS/view?usp=shari
 The video demonstrates the complete user experience: uploading an appam image, viewing the processing animation, and receiving a generated horoscope. It also showcases the error handling for non-appam images and the secret easter egg.
 
 ## Team Contributions
-- *[Name 1]:* & *[Name 2]:* Design and development
+- *Advika Rajiv:* & *Malavika G K:* Design and development
